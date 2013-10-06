@@ -10,5 +10,4 @@ title: Algorithms
 ### Computer Science
 
 * [Algorithms](/algorithms/)
-
-* Design Patterns
+* [Design Patterns](/design-patterns/)
