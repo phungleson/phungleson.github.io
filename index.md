@@ -3,6 +3,10 @@ layout: default
 title: Algorithms
 ---
 
+* [Quotes](/quotes/)
+
 ### Computer Science
 
-* [Algorithms](/algorithms)
+* [Algorithms](/algorithms/)
+
+* Design Patterns
