@@ -3,7 +3,7 @@ layout: default
 title: Algorithms
 ---
 
-### Notes to self
+### Notes
 
 * [Quotes](/quotes/)
 
@@ -11,3 +11,9 @@ title: Algorithms
 
 * [Algorithms](/algorithms/)
 * [Design Patterns](/design-patterns/)
+
+### Coding Habits
+
+* [Algorithms in Ruby](https://github.com/phungleson/algorithms.rb)
+* [Algorithms in Go](https://github.com/phungleson/algorithms.rb)
+* [Algorithms in Java](https://github.com/phungleson/algorithms.java)
