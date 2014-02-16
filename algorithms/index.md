@@ -60,14 +60,14 @@ A tree is an undirected graph in which any two vertices are connected by exactly
 
 ### Mathematics
 
-* [Basics](/algorithms/mathematics/basics/)
+* [Concepts](/algorithms/mathematics/concepts/)
 * [Logarithms](/algorithms/mathematics/logarithms/)
 
 ### Probability
 
 ### Geometry
 
-* [Basics](/algorithms/geometry/basics/)
+* [Concepts](/algorithms/geometry/concepts/)
 * [Vector](/algorithms/geometry/vector/)
 
 ### Discrete mathematics
