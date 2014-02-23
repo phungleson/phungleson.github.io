@@ -8,19 +8,40 @@ title: Merge sort
 Apply merge sort to the sublists of an unsorted list then merge all the sorted sublists.
 
 ~~~
-def merge_sort(array)
-  return array if array.size <= 1
+def merge_sort(a)
+  return a if a.size <= 1
 
-  mid = array.size / 2
+  mid = a.size / 2
 
-  merge_sort(array.take(mid))
-  merge_sort(array.drop(mid))
+  b = merge_sort(a.take(mid))
+  c = merge_sort(a.drop(mid))
 
-  array.size.times do |index|
-    array += b.shift and next if a.empty?
-    array += a.shift and next if b.empty?
+  a.each_with_index do |element, index|
+    a[index] = b.shift and next if c.empty?
+    a[index] = c.shift and next if b.empty?
+    a[index] = b.first < c.first ? b.shift : c.shift
+  end
+end
+~~~
 
-    array[index] = a.first < b.first ? a.shift : b.shift
+~~~
+require 'rspec'
+
+describe 'merge sort' do
+  it 'sort empty array' do
+    expect(merge_sort([])).to eq([])
+  end
+
+  it 'sort single item array' do
+    expect(merge_sort([1])).to eq([1])
+  end
+
+  it 'sort two-item array' do
+    expect(merge_sort([2, 1])).to eq([1, 2])
+  end
+
+  it 'sort multiple-item array' do
+    expect(merge_sort((0..10).to_a.shuffle)).to eq((0..10).to_a)
   end
 end
 ~~~
