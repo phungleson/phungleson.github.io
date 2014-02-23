@@ -1,2 +1,5 @@
-markdown: redcarpet
 permalink: pretty
+markdown: kramdown
+kramdown:
+  coderay_default_lang: ruby
+  coderay_line_numbers: nil
