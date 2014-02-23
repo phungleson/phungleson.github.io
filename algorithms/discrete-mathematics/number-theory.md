@@ -13,11 +13,19 @@ Prime number is a number greater than 1 that has no positive divisors other than
 
 Greatest common divisor of two or more integers is the largest positive integer that divides the numbers without a remainder.
 
-`gcd(a, b) = b == 0 ? a : gcd(b, a % b)`
+~~~ ruby
+def gcd(a, b)
+  b == 0 ? a : gcd(b, a % b)
+end
+~~~
 
 Least common multiple is the smallest integer such as `a` and `b` divide it without a reminder.
 
-`lcm(a, b) = a * (b / gcd(a, b))`
+~~~ ruby
+def lcm(a, b)
+  a * (b / gcd(a, b))
+end
+~~~
 
 ### Factorial
 
