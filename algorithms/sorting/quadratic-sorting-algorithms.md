@@ -19,7 +19,6 @@ def insertion_sort(a)
 
     (i - 1).downto(0) do |j|
       a[j] > current_element ? a[j + 1] = a[j] : break
-
       current_index -= 1
     end
 
