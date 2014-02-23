@@ -13,18 +13,13 @@ Sorting algorithms that run in $$ \Theta(n^2) $$ time complexity.
 require 'rspec'
 
 def insertion_sort(a)
-  a.size.times do |i|
-    current_element = a[i]
-    current_index = i
-
+  a.each_with_index do |element, i|
     (i - 1).downto(0) do |j|
-      a[j] > current_element ? a[j + 1] = a[j] : break
-      current_index -= 1
+      a[j + 1] = element and break if a[j] < element
+      a[j + 1] = a[j]
+      a[j] = element if j == 0
     end
-
-    a[current_index] = current_element
   end
-  a
 end
 
 describe 'insertion sort' do
