@@ -8,6 +8,8 @@ title: Heap
 A heap is a tree that satisfies the **heap property**: if `x` is a child node of `y` then `y.key < x.key`. Alternatively, **min-heap** is a heap where the smallest element is always in the root node.
 
 ~~~
+require 'rspec'
+
 def create_heap(array)
   array.each_with_index do |element, i|
     while i > 0 && array[i/2] < array[i]
@@ -16,9 +18,7 @@ def create_heap(array)
     end
   end
 end
-~~~
 
-~~~
 describe 'create heap' do
   it 'create heap from empty array' do
     expect(create_heap([])).to eq []
