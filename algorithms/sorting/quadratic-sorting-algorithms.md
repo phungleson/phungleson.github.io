@@ -9,7 +9,7 @@ Sorting algorithms that run in $$ \Theta(n^2) $$ time complexity.
 
 ### Insertion sort
 
-~~~
+~~~ ruby
 require 'rspec'
 
 def insertion_sort(a)
