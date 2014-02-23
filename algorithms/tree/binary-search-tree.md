@@ -8,6 +8,8 @@ title: Binary search tree
 Let `x` be a node in a BST. If `y` is a node in the left subtree of `x`, then `y.key < x.key`. If `y` is a node in the right subtree of `x`, then `y.key > x.key`.
 
 ~~~
+require 'rspec'
+
 class Node < Struct.new(:key, :parent, :left, :right)
 end
 
@@ -56,4 +58,24 @@ class BST
     parent.left == node ? parent.left = new_node : parent.right = new_node
   end
 end
+
+describe BST do
+  let(:bst) { BST.new }
+
+  describe '#search' do
+    context 'with empty tree' do
+      it 'should return nothing' do
+        expect(bst.search(3)).to be_nil
+      end
+    end
+
+    context 'with a tree but invalid key' do
+      before { bst.insert(10) }
+      it 'should return nothing' do
+        expect(bst.search(3)).to be_nil
+      end
+    end
+  end
+end
+
 ~~~
