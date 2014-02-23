@@ -40,7 +40,6 @@ describe 'create heap' do
     array = (0..10).to_a.shuffle
     create_heap(array)
     expect(array.first).to eq 10
-    expect(array.first(3)).to include 8, 9
   end
 end
 ~~~
