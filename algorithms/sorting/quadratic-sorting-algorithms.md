@@ -28,7 +28,7 @@ def insertion_sort(a)
   a
 end
 
-describe 'insertion_sort' do
+describe 'insertion sort' do
   it 'should sort empty array' do
     expect(insertion_sort([])).to eq []
   end
